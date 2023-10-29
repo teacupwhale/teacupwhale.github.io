@@ -17,16 +17,37 @@ const theme = {
     body: "sans-serif",
     heading: "Crimson Pro, serif",
   },
-  fontSizes: [12, 14, 16, 20, 24, 32, 48, 96],
+  fontSizes: [12, 14, 16, 20, 24, 32, 128, 256],
+  container: {
+    sticky: {
+      position: "sticky",
+      zIndex: "100",
+    },
+  },
+  flex: {
+    hero: {
+      minHeight: "100vh",
+    },
+    section: {
+      alignItems: "center",
+      minHeight: "90vh",
+    },
+  },
   text: {
     body: {
       textAlign: "left",
     },
     largeLogo: {
-      fontSize: 7,
-      color: "lightText",
+      fontSize: "16vw",
+      color: "primary",
       textAlign: "center",
-      padding: 6,
+    },
+    largeLogoSub: {
+      fontSize: "6vw",
+      color: "primary",
+      textAlign: "right",
+      top: "-0.45em",
+      position: "relative",
     },
   },
   cards: {
@@ -36,6 +57,9 @@ const theme = {
       boxShadow: "0 0 4px 1px rgba(0, 0, 0, 0.5)",
       padding: 4,
     },
+    section: {
+      background: "background",
+    },
   },
   sizes: {
     container: {
@@ -44,7 +68,7 @@ const theme = {
   },
   styles: {
     h1: {
-      fontFamily: "heading",
+      fontFamily: "fonts.heading",
     },
     p: {
       fontFamily: "body",

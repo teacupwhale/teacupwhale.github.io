@@ -1,5 +1,5 @@
 import React from "react";
-import { Card, Flex, Heading } from "theme-ui";
+import { Card, Flex, Heading, Embed } from "theme-ui";
 import Layout from "../components/layout/Layout";
 
 export default function Projects(): React.ReactElement {
@@ -13,31 +13,29 @@ export default function Projects(): React.ReactElement {
       >
         <Card>
           <Heading>Furniturator</Heading>
-          <iframe
-            frameborder="0"
+          <Embed
             src="https://itch.io/embed-upload/3096649?color=333333"
-            allowfullscreen=""
+            allowFullScreen={true}
             width="960"
             height="620"
           >
             <a href="https://minimalocean.itch.io/furniturator">
               Play Furniturator on itch.io
             </a>
-          </iframe>
+          </Embed>
         </Card>
         <Card>
           <Heading>Spoopy Plumpkins</Heading>
-          <iframe
-            frameborder="0"
+          <Embed
             src="https://itch.io/embed-upload/2947112?color=000000"
-            allowfullscreen=""
+            allowFullScreen={true}
             width="660"
             height="478"
           >
             <a href="https://minimalocean.itch.io/spoopy-plumpkins">
               Play Spoopy Plumpkins on itch.io
             </a>
-          </iframe>
+          </Embed>
         </Card>
       </Flex>
     </Layout>

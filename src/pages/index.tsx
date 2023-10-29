@@ -5,6 +5,8 @@ import Logo from "../components/logo/largeLogo.mdx";
 import Introduction from "../components/introduction/introduction.mdx";
 import Links from "../components/platform-link/Links";
 import { Box, Card, Container, Flex, Heading } from "theme-ui";
+import Section from "../components/section/Section";
+import LargeLogo from "../components/logo/largeLogo";
 
 const IndexPage: React.FC<PageProps> = () => {
   return (
@@ -16,19 +18,12 @@ const IndexPage: React.FC<PageProps> = () => {
             alignItems: "center",
           }}
         >
-          <Container>
-            <Heading
-              sx={{
-                variant: "text.largeLogo",
-              }}
-            >
-              moonless
-              <div>studio</div>
-            </Heading>
-          </Container>
-          <Card>
-            <Introduction />
-          </Card>
+          <LargeLogo />
+          <Section variant="flex.section">
+            <Card variant="card.section" sx={{ margin: "auto" }}>
+              <Introduction />
+            </Card>
+          </Section>
           <Links />
         </Flex>
       </main>
