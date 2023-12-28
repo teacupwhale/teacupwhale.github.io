@@ -1,6 +1,6 @@
 import React from "react";
 import { Flex } from "theme-ui";
-import { PassThroughChildren } from "../layout/Layout";
+import { PassThroughChildren } from "../logo/Layout";
 export default function Section({
   children,
   variant,

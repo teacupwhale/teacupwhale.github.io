@@ -1,6 +1,6 @@
 import * as React from "react";
 import type { HeadFC, PageProps } from "gatsby";
-import Layout from "../components/layout/Layout";
+import Layout from "../components/logo/Layout";
 import Links from "../components/platform-link/Links";
 import { Flex } from "theme-ui";
 import LargeLogo from "../components/logo/largeLogo";

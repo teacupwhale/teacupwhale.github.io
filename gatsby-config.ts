@@ -3,17 +3,8 @@ const crimsonPro = "Crimson Pro";
 const unna = "Unna";
 const nunito = "Nunito";
 const rubik = "Rubik";
-const notoSans = "Noto Sans";
-const amaticSC = "Amatic SC";
 
-const googleFonts: string[] = [
-  crimsonPro,
-  unna,
-  nunito,
-  rubik,
-  notoSans,
-  amaticSC,
-];
+const googleFonts: string[] = [crimsonPro, unna, nunito, rubik];
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `moonless`,
@@ -67,13 +58,16 @@ const config: GatsbyConfig = {
           `https://fonts.googleapis.com`,
           `https://fonts.gstatic.com`,
         ],
-        web: googleFonts.map((font: string) => ({
-          name: font,
-          file: `https://fonts.googleapis.com/css2?family=${font.replace(
-            " ",
-            "+"
-          )}`,
-        })),
+        web: [
+          {
+            name: "Noto Sans",
+            file: `https://fonts.googleapis.com/css2?family=Noto+Sans:wght@100;400&display=swap`,
+          },
+          {
+            name: "Amatic SC",
+            file: `https://fonts.googleapis.com/css2?family=Amatic+SC:wght@400;700&display=swap`,
+          },
+        ],
       },
     },
   ],

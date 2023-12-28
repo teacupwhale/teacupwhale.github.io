@@ -1,6 +1,6 @@
 import React from "react";
 import Section from "../section/Section";
-import { Box, Heading } from "theme-ui";
+import { Box, Card, Heading } from "theme-ui";
 import IntroductionCopy from "./introductionCopy.mdx";
 import EmailSignUpForm from "../email-sign-up-form/EmailSignUpForm";
 
@@ -9,12 +9,16 @@ export default function Introduction(): React.ReactElement {
     <>
       <Section variant="flex.sectionPrimary">
         <Box sx={{ margin: "auto" }}>
-          <Heading>Do NPCs dream of non-player sheep?</Heading>
-          <IntroductionCopy />
+          <Card>
+            <Heading as="h1" variant="heading.primary">
+              do NPCs dream
+              <br />
+              of non-player sheep?
+            </Heading>
+            <IntroductionCopy />
+          </Card>
+          <EmailSignUpForm />
         </Box>
-      </Section>
-      <Section variant="flex.sectionPrimary">
-        <EmailSignUpForm />
       </Section>
     </>
   );

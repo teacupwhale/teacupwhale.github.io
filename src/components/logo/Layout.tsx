@@ -1,8 +1,8 @@
 import { HeadFC } from "gatsby";
 import React from "react";
-import Fonts from "./fonts";
-import Navigation from "../navigation/Navigation";
+import Fonts from "../layout/fonts";
 import MailerLiteScript from "../vendor-scripts/MailerLite";
+import Footer from "../footer/footer";
 
 export type PassThroughChildren = {
   children: JSX.Element | JSX.Element[];
@@ -15,6 +15,7 @@ export default function Layout({
     <>
       <MailerLiteScript />
       {children}
+      <Footer />
     </>
   );
 }

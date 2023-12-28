@@ -1,6 +1,6 @@
 import React from "react";
 import { Card, Flex, Heading, Embed } from "theme-ui";
-import Layout from "../components/layout/Layout";
+import Layout from "../components/logo/Layout";
 
 export default function Projects(): React.ReactElement {
   return (

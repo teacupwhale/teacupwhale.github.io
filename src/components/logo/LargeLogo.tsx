@@ -1,6 +1,6 @@
 import React from "react";
 import Section from "../section/Section";
-import { Container, Heading, Box } from "theme-ui";
+import { Heading, Box } from "theme-ui";
 import { StaticImage } from "gatsby-plugin-image";
 
 export default function LargeLogo(): React.ReactElement {
@@ -10,9 +10,11 @@ export default function LargeLogo(): React.ReactElement {
         <StaticImage
           src="../../images/teacup-whale-logo-single-color.png"
           alt="Teacup Whale Logo"
-          height={600}
+          height={375}
         />
-        <Heading>a game studio in Portland, Oregon</Heading>
+        <Heading as="h3" variant="heading.subheading">
+          a game studio in Portland, Oregon
+        </Heading>
       </Box>
     </Section>
   );
