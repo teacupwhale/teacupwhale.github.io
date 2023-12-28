@@ -1,5 +1,5 @@
 import React from "react";
-import { Link } from "theme-ui";
+import { Link, Card } from "theme-ui";
 
 export enum Platform {
   MASTODON = "Mastodon",
@@ -63,8 +63,8 @@ export default function PlatformLink({
   if (!link && !text) return null;
 
   return (
-    <div>
+    <Card variant="cards.primary" sx={{ margin: "auto" }}>
       {platform}: <Link href={link}>{text || link}</Link>
-    </div>
+    </Card>
   );
 }

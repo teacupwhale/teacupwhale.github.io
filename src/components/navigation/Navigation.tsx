@@ -10,6 +10,7 @@ import {
 
 const navStyles = {
   top: 0,
+  px: 2,
 };
 
 export default function Navigation(): React.ReactElement {
@@ -17,7 +18,7 @@ export default function Navigation(): React.ReactElement {
 
   return (
     <Container
-      style={navStyles}
+      sx={navStyles}
       color="primary"
       bg="background"
       variant="container.sticky"
@@ -32,7 +33,7 @@ export default function Navigation(): React.ReactElement {
             flex: "1 0 auto",
           }}
         >
-          moonless studio
+          teacup whale
         </Heading>
         <Container
           sx={{

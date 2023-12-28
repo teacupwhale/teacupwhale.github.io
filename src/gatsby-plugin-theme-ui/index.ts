@@ -5,19 +5,23 @@ import { merge } from "theme-ui";
 const theme = {
   colors: {
     text: "#222",
-    background: "#545AA2",
-    primary: "#E8D7F1",
-    secondary: "#F47175",
+    background: "#2E1A2C;",
+    primary: "#FFF",
+    secondary: "#FFF",
     accent: "#AEF6C7",
     highlight: "#545AA2",
     muted: "hsl(353, 40%, 96%)",
     lightText: "#FFF",
   },
   fonts: {
-    body: "sans-serif",
-    heading: "Crimson Pro, serif",
+    body: "'Noto Sans', Rubik, sans-serif",
+    heading: "'Amatic SC', 'Crimson Pro', serif",
   },
   fontSizes: [12, 14, 16, 20, 24, 32, 128, 256],
+  fontWeights: {
+    body: 400,
+    heading: 400,
+  },
   container: {
     sticky: {
       position: "sticky",
@@ -26,11 +30,24 @@ const theme = {
   },
   flex: {
     hero: {
-      minHeight: "100vh",
+      minHeight: "60vh",
+      justifyContent: "center",
+      alignItems: "center",
+      width: "100%",
+      color: "primary",
+      textAlign: "center",
     },
     section: {
       alignItems: "center",
-      minHeight: "90vh",
+      minHeight: "60vh",
+      width: "100%",
+    },
+    sectionPrimary: {
+      color: "primary",
+      alignItems: "center",
+      minHeight: "60vh",
+      width: "100%",
+      justifyContent: "center",
     },
   },
   text: {
@@ -42,6 +59,11 @@ const theme = {
       color: "primary",
       textAlign: "center",
     },
+    largeLogoSecondary: {
+      fontSize: "10vw",
+      color: "primary",
+      textAlign: "left",
+    },
     largeLogoSub: {
       fontSize: "6vw",
       color: "primary",
@@ -52,13 +74,35 @@ const theme = {
   },
   cards: {
     primary: {
-      background: "#fff",
-      width: "80%",
+      background: "primary",
+      width: "60vw",
       boxShadow: "0 0 4px 1px rgba(0, 0, 0, 0.5)",
       padding: 4,
+      margin: "1em",
     },
     section: {
-      background: "background",
+      background: "primary",
+      color: "background",
+      fontSize: 3,
+      padding: 4,
+      height: "100%",
+      width: "100%",
+    },
+  },
+  box: {
+    filled: {
+      border: "3px solid black",
+      background: "#FFF",
+      width: 16,
+      height: 16,
+      boxSizing: "content-box",
+    },
+    empty: {
+      border: "none",
+      background: "#555",
+      width: 16,
+      height: 16,
+      boxSizing: "content-box",
     },
   },
   sizes: {
@@ -67,11 +111,16 @@ const theme = {
     },
   },
   styles: {
+    root: {
+      padding: 0,
+    },
     h1: {
-      fontFamily: "fonts.heading",
+      fontFamily: "heading",
     },
     p: {
       fontFamily: "body",
+      fontSize: 3,
+      fontWeight: "body",
     },
   },
 };

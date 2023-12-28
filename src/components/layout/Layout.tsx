@@ -2,6 +2,7 @@ import { HeadFC } from "gatsby";
 import React from "react";
 import Fonts from "./fonts";
 import Navigation from "../navigation/Navigation";
+import MailerLiteScript from "../vendor-scripts/MailerLite";
 
 export type PassThroughChildren = {
   children: JSX.Element | JSX.Element[];
@@ -12,10 +13,16 @@ export default function Layout({
 }: PassThroughChildren): React.ReactElement {
   return (
     <>
-      <Navigation />
+      <MailerLiteScript />
       {children}
     </>
   );
 }
 
-export const Heading: HeadFC = () => <Fonts />;
+export const Heading: HeadFC = () => {
+  return (
+    <>
+      <Fonts />
+    </>
+  );
+};
