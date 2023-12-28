@@ -1,5 +1,19 @@
 import type { GatsbyConfig } from "gatsby";
+const crimsonPro = "Crimson Pro";
+const unna = "Unna";
+const nunito = "Nunito";
+const rubik = "Rubik";
+const notoSans = "Noto Sans";
+const amaticSC = "Amatic SC";
 
+const googleFonts: string[] = [
+  crimsonPro,
+  unna,
+  nunito,
+  rubik,
+  notoSans,
+  amaticSC,
+];
 const config: GatsbyConfig = {
   siteMetadata: {
     title: `moonless`,
@@ -43,6 +57,23 @@ const config: GatsbyConfig = {
       resolve: "gatsby-plugin-theme-ui",
       options: {
         preset: "@theme-ui/preset-deep",
+      },
+    },
+    {
+      resolve: `gatsby-omni-font-loader`,
+      options: {
+        enableListener: true,
+        preconnect: [
+          `https://fonts.googleapis.com`,
+          `https://fonts.gstatic.com`,
+        ],
+        web: googleFonts.map((font: string) => ({
+          name: font,
+          file: `https://fonts.googleapis.com/css2?family=${font.replace(
+            " ",
+            "+"
+          )}`,
+        })),
       },
     },
   ],
