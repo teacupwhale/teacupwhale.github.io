@@ -7,8 +7,8 @@ const rubik = "Rubik";
 const googleFonts: string[] = [crimsonPro, unna, nunito, rubik];
 const config: GatsbyConfig = {
   siteMetadata: {
-    title: `moonless`,
-    siteUrl: `https://moonless.studio`,
+    title: `Teacup Whale`,
+    siteUrl: `https://teacupwhale.com`,
   },
   // More easily incorporate content into your pages through automatic TypeScript type generation and better GraphQL IntelliSense.
   // If you use VSCode you can also use the GraphQL plugin
